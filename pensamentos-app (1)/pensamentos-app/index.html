@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diário Digital Simples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="script.js" type="module"></script>
+  </head>
+
+  <body data-context="neutro"> 
+    <main>
+      <h1>Meu Diário de Pensamentos</h1>
+
+      <div class="container-destaque">
+        <h3 id="ultimo-pensamento">Estou gostando muito de aprender Javascript, finalmente fez sentido.</h3> 
+      </div>
+      
+      <div class="container-placar">
+        <h2>Entradas Registradas:</h2>
+        <p id="contador-posts">1 post</p>
+      </div>
+      
+      <div class="container-humor">
+        <p>Como você está se sentindo?</p>
+        <button id="humor-feliz" class="button-humor button-feliz" data-humor="feliz">😁 Feliz</button>
+        <button id="humor-neutro" class="button-humor button-neutro" data-humor="neutro">😐 Neutro</button>
+        <button id="humor-triste" class="button-humor button-triste" data-humor="triste">😢 Triste</button>
+      </div>
+
+      <form id="formulario-registro">
+        <textarea
+          id="input-pensamento"
+          placeholder="O que você está pensando hoje?"
+          rows="5"
+        ></textarea>
+        <button class="button-registrar" type="submit">Registrar Pensamento</button>
+      </form>
+
+      <div class="container-lista">
+        <h2>Linha do Tempo</h2>
+        <hr />
+        
+        <div id="container-posts">
+           
+            </div>
+        
+        <p class="mensagem-lista-vazia" >Nenhum pensamento registrado ainda.</p>
+      </div>
+    </main>
+    <link rel="stylesheet" href="script.js">
+  </body>
+</html>

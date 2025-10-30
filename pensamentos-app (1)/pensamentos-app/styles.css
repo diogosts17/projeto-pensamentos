@@ -1,0 +1,242 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+/* --- R9: ESTILOS BASEADOS NO DATA-CONTEXT (CORPO) --- */
+
+/* 1. ESTADO NEUTRO (Padrão) */
+body[data-context="neutro"] {
+    background-color: #a28c4c85; /* Cor de Papel Neutro */
+}
+
+/* 2. ESTADO FELIZ */
+body[data-context="feliz"] {
+    background-color: #8925c8aa; /* Verde claro e suave (Felicidade/Calma) */
+}
+
+/* 3. ESTADO TRISTE */
+body[data-context="triste"] {
+    background-color: #e73b32a3; /* Azul/cinza suave (Tristeza/Reflexão) */
+}
+
+body {
+    color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    transition: background-color 0.3s ease; /* Transição suave para a mudança de humor */
+}
+
+/* CONTAINER PRINCIPAL (mantido) */
+main {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1),
+                inset 0 10px 10px -10px rgba(0, 0, 0, 0.2);
+    max-width: 650px;
+    width: 100%;
+}
+
+/* TÍTULOS (mantido) */
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #3f51b5;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+/* --- ESTILO DA SEÇÃO DE DESTAQUE (R7) --- */
+.container-destaque {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff8e1; 
+    border-radius: 4px;
+    text-align: center;
+}
+
+#ultimo-pensamento {
+    font-size: 1.1rem;
+    color: #a87f58;
+}
+
+#ultimo-pensamento strong {
+    font-weight: 700;
+    color: #3f51b5; 
+}
+
+/* PLACAR DE POSTS E H2 (mantido) */
+.container-placar {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+#contador-posts {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #3f51b5;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* --- ESTILO DA SEÇÃO DE HUMOR (R8) --- */
+.container-humor {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container-humor p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.button-humor {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-size: 1rem;
+}
+
+.button-humor:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+/* FORMULÁRIO (mantido) */
+#formulario-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+#input-pensamento {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.button-registrar {
+    padding: 12px 20px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.button-registrar:hover {
+    background-color: #303f9f;
+}
+
+/* --- LISTAGEM DE POSTS (Flexbox) (mantido) --- */
+#container-posts {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;       
+    justify-content: flex-start;
+    padding: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* ESTILO DO CARD (ARTICLE.item-post) (mantido) */
+.item-post {
+    flex-basis: calc(50% - 10px); 
+    min-width: 250px; 
+    
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    
+    background-color: #fcfcfc;
+    padding: 18px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    height: auto; 
+    border: 1px solid transparent; 
+    transition: border 0.2s;
+}
+
+.item-post:hover {
+    border: 1px solid #e0e0e0; 
+}
+
+.conteudo-post {
+    flex-grow: 1;
+    margin-right: 0; 
+    margin-bottom: 10px; 
+}
+
+.texto-post {
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+}
+
+.data-post {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 10px; 
+}
+
+/* BOTÃO DE EXCLUIR (mantido) */
+.button-excluir {
+    align-self: flex-end; 
+    background: none;
+    border: none;
+    color: #a87f58;
+    padding: 5px; 
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 50%; 
+    transition: background-color 0.2s, color 0.2s;
+    flex-shrink: 0; 
+    margin-top: 10px;
+}
+
+.button-excluir:hover {
+    background-color: #fcebeb; 
+    color: #dc3545; 
+}
+
+/* MENSAGEM DE LISTA VAZIA (mantido) */
+.mensagem-lista-vazia {
+    text-align: center;
+    color: #a87f58;
+    margin-top: 25px;
+    font-style: italic;
+}
