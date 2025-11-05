@@ -1,4 +1,4 @@
-
+// nova mudanca
 const formulario = document.querySelector("#formulario-registro")
 const textarea = document.querySelector("#input-pensamento")
 const containerPosts = document.querySelector("#container-posts")
